@@ -1,0 +1,10 @@
+[Unit]
+Description=LED screen service
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/opt/pie-led/
+ExecStart=/usr/bin/python3 ./stats.py
+[Install]
+WantedBy=multi-user.target
